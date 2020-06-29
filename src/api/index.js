@@ -16,3 +16,19 @@ export const fetchData = async () => {
 
     }
 }
+
+export const fetchDailyData = async () => {
+    try{
+        const {data} = await axios.get(`${url}/daily`); //used a template string since we need to get daily data
+        //we map over the data and for each dailyData we return an object
+        const modifiedData = data.map((dailyData) => ({           
+            date: dailyData.reportdate,
+            deaths: dailyData.deaths.total,
+            confirmed: dailyData.confirmed.total,
+        }));
+        return modifiedData;
+        
+    }catch(error) {
+
+    }
+}

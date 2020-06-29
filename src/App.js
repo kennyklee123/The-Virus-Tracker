@@ -20,7 +20,7 @@ class App extends React.Component {
         //sets the state's data to what we just fetched 
         this.setState({ data: fetchedData}); 
 
-    }
+    } 
     render() {
         //destructer data here so we do not need to call this.state.data 
         const { data } = this.state;
