@@ -13,7 +13,7 @@ export const fetchData = async () => {
         return { confirmed, recovered, deaths, lastUpdate}; 
         
     } catch ( error){
-
+        console.log(error);
     }
 }
 
@@ -27,8 +27,21 @@ export const fetchDailyData = async () => {
             confirmed: dailyData.confirmed.total,
         }));
         return modifiedData;
-        
-    }catch(error) {
 
+    }catch(error) {
+        console.log(error);
+    }
+}
+
+export const fetchCountries = async () => {
+    //we only want the countries from the data
+    try{
+        const{ data: {countries}} = await axios.get(`${url}/countries`);
+        //for each country, we only want to return the name of the country not the extra stuff
+        return countries.map((country) => country.name); 
+        
+    }catch(error)
+    {
+        console.log(error);
     }
 }

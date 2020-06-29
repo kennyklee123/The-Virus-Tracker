@@ -1,0 +1,6 @@
+.container {
+    display: flex;
+    justify-content: center;
+    width: 85%; /* I wanted the chart to be 85% of the screen*/
+}
+
