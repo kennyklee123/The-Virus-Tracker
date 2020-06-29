@@ -1,0 +1,20 @@
+
+.card {
+    margin: 0 2% !important; /* material UI requires !important */
+}
+
+.container {
+    margin: 50px 0;
+}
+
+.infected {
+    border-bottom: 10px solid rgba(0,0,255, 0.5); /*the a is opacity*/
+}
+
+.recovered {
+    border-bottom: 10px solid rgba(0,255,0, 0.5); /*the a is opacity*/
+}
+
+.deaths {
+    border-bottom: 10px solid rgba(255,0,0, 0.5); /*the a is opacity*/
+}
