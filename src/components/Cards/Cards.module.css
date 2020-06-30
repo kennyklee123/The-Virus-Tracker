@@ -18,3 +18,12 @@
 .deaths {
     border-bottom: 10px solid rgba(255,0,0, 0.5); /*the a is opacity*/
 }
+
+/* card is a material UI element so we need !important, for card the margin is 2%on the top and bottom and 0 on l/r */
+
+@media (max-width: 770px) {
+    .card {
+        margin: 2% 0 !important
+    }
+    
+}

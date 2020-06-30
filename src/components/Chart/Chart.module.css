@@ -4,3 +4,9 @@
     width: 85%; /* I wanted the chart to be 85% of the screen*/
 }
 
+
+@media (max-width: 770px) {
+    .container {
+        width: 100%; /* we want the graph to be 100% as we want it bigger on mobile */
+    }
+}

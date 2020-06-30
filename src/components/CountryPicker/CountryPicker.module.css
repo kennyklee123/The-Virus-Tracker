@@ -1,0 +1,5 @@
+/*for Material UI code we need !important*/
+.formControl {
+    margin-bottom: 30px !important;
+    width: 30%;
+}

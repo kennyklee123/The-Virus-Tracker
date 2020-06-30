@@ -8,3 +8,20 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+
+.image {
+    margin-top: 50px;
+    width: 370px;
+   
+}
+
+/*770 px is for mobile and tablets, margin is 0 and 10% l/r  */
+
+@media (max-width: 770px) {
+    .container {
+        margin: 0 10%;
+    }
+    .image {
+        width:100%;
+    }
+}
