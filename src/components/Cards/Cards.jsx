@@ -4,13 +4,13 @@ import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 import cx from 'classnames';//allows us to have multiple classNames
 import styles from './Cards.module.css';
 
-/*destructure the prop that is passed in (data) into the parts we need
+/*all that data comes from destructuring the prop that is passed in (data) into the parts we need
   Grid is a container that grabs all the other cards and provides a basic styling
   Card component is going to be our grid.
   Tyography is used for texts like paragraph, heading, etc
   XS is for mobile devices, md is for medium screens, 12 and 3 are the spacing we want it to take
   */
-const Cards = ({data: { confirmed, recovered, deaths, lastUpdate }}) => {
+const infoCards = ({data: { confirmed, recovered, deaths, lastUpdate }}) => {
     //the first object is empty and we check if it is confirmed or not
     //if it is not confirmed we cant do anything yet so I return loading
     if(!confirmed){
@@ -54,4 +54,4 @@ const Cards = ({data: { confirmed, recovered, deaths, lastUpdate }}) => {
     )
 }
 
-export default Cards;
+export default infoCards;

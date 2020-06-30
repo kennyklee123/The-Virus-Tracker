@@ -19,7 +19,7 @@ class App extends React.Component {
         data : {},
         country: '',
     }
-    //We fetch the data here to be used 
+    //Makes a request to the fetchData
     async componentDidMount(){
         const fetchedData = await fetchData(); 
         //sets the state's data to what we just fetched 
@@ -27,6 +27,7 @@ class App extends React.Component {
     } 
     //This handles the country change and if they choose global, country will be an empty string
     //The api's fetchData handles whether a the country is empty or not
+    
     handleCountryChange = async (country) => {
         const fetchedData = await fetchData(country); 
         this.setState({ data: fetchedData, country: country }); //updates both the data and country

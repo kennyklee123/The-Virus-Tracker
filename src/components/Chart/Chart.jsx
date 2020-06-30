@@ -4,7 +4,7 @@ import { Line, Bar } from 'react-chartjs-2';
 
 import styles from './Chart.module.css';
 
-//the two parameters data and country are used for the bar chart
+//fetches daily data in here
 const Chart = ({data: { confirmed, deaths, recovered }, country}) => {
 
     //initial value is an empty object and once we get the daily data it is automatically set
@@ -13,14 +13,13 @@ const Chart = ({data: { confirmed, deaths, recovered }, country}) => {
     //cant add async to useEffect normally, have to make a function inside of it instead
     // the empty array is needed to make the useEffect act like a componentDidmount so it only happens once
     useEffect(() => {
-        const fetchAPI = async () =>{
+            const fetchInitialData = async () =>{
             //populate daily data here from the promise returned
             setDailyData(await fetchDailyData()); 
         }
-        fetchAPI(); //calls the function above^
+        fetchInitialData(); //calls the function above^
     }, []);
 
-    
     const lineChart = (
     //if the daily data is available we return the line chart, else its null
     //We populate labels an array of all of the dates
@@ -47,10 +46,12 @@ const Chart = ({data: { confirmed, deaths, recovered }, country}) => {
     );
     console.log(confirmed, deaths, recovered);
     const barChart = (
-        //we have two {{}} in data as the first makes it dynamic and the second pair opens the object
-        //labels is static since there will only be 3 columns
-        //datasets is an array of only one object
-        //the api was being weird when trying to display data, ended up needing to add .value to confirmed, deaths,recovered as it was in a weird object
+        /*When we choose what country to look at, we don't have the array of all the different days for that country, only the current data
+          we have two {{}} in data as the first makes it dynamic and the second pair opens the object
+          labels is static since there will only be 3 columns
+         datasets is an array of only one object
+         the api was being weird when trying to display data, ended up needing to add .value to confirmed, deaths,recovered as it was in a weird object
+        */
         confirmed
             ?(
                 <Bar
