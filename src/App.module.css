@@ -14,7 +14,9 @@ body {
     width: 370px;
    
 }
-
+#github{
+    color: rgb(0, 0, 0)
+}
 /*770 px is for mobile and tablets, margin is 0 and 10% l/r  */
 
 @media (max-width: 770px) {
