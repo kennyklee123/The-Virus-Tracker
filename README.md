@@ -5,7 +5,7 @@ This project uses the Covid-19 API to fetch data from John Hopkins University on
 Try the app here:https://anothervirustracker.netlify.app
 ![Corona](https://user-images.githubusercontent.com/55815393/89497191-b74ff100-d770-11ea-977e-20713bef20b9.gif)
 
-##Technologies and API Used
+## Technologies and API Used
 * JavaScript
 * [React](https://reactjs.org)
 * [Material-UI](https://material-ui.com)
